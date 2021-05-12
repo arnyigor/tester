@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-parcelize'
+apply from: "$rootProject.projectDir/dependencies.gradle"
+apply from: "$rootProject.projectDir/commonconfig.gradle"
+
+android {
+    kotlinOptions {
+        useIR = true
+    }
+    buildFeatures {
+        compose true
+    }
+    defaultConfig {
+        applicationId 'com.arny.tester'
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion compose_version
+        kotlinCompilerVersion '1.4.32'
+    }
+}
+
+dependencies {
+    kotlin()
+    navigation()
+    supportLegacy()
+    appcompat()
+    fragment()
+    activity()
+    androidCompose(compose_version)
+    lifecycle()
+    recycler()
+    material()
+    constraintlayout()
+    rxjava2()
+}
