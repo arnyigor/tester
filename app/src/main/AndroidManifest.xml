@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tester">
         <activity
+            android:name=".ui.first.FirstActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.simple.SimpleActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.compose.ComposeActivity"
             android:exported="true"
             android:label="@string/title_activity_compose"
