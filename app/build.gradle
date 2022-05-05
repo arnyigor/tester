@@ -19,22 +19,18 @@ android {
         }
     }
     composeOptions {
-        kotlinCompilerExtensionVersion compose_version
-        kotlinCompilerVersion '1.4.32'
+        kotlinCompilerExtensionVersion versions.composeVersion
     }
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.3.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     kotlin()
     navigation()
     supportLegacy()
     appcompat()
     fragment()
     activity()
-    androidCompose(compose_version)
+    androidCompose(versions.composeVersion)
     lifecycle()
     recycler()
     material()
